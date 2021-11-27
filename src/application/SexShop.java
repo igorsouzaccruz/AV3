@@ -29,7 +29,7 @@ public class SexShop {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		try {
-		/*System.out.println("Cadastrar Cliente: ");
+		System.out.println("Cadastrar Cliente: ");
 		System.out.print("Nome: ");
 		String name = sc.nextLine();
 		System.out.print("Sexo (masculino/feminino): ");
@@ -41,7 +41,7 @@ public class SexShop {
 		
 		Cliente cliente = new Cliente(name, sexo, dataNascimento, vip);
 		System.out.println(cliente);
-		*/System.out.println();
+		System.out.println();
 		
 		char ch = 'y';
 		do {
@@ -90,9 +90,9 @@ public class SexShop {
 		}
 		System.out.println(total);
 		
-		/*}catch (ParseException e) {
+		}catch (ParseException e) {
 			System.out.println("Você digitou a data no formato errado! " + e);
-		*/}catch (InputMismatchException e) {
+		}catch (InputMismatchException e) {
 			System.out.println("Você digitou um valor diferente do esperado! ");
 		}
 		sc.close();

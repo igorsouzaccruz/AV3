@@ -1,10 +1,12 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Cliente extends Pessoa{
 	
 	private Boolean vip;
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 	public Cliente(String name, String sexo, Date dataNascimento, Boolean vip) {
 		super(name, sexo, dataNascimento);
@@ -26,6 +28,6 @@ public class Cliente extends Pessoa{
 	@Override
 	public String toString() {
 		return "Cliente [getName()=" + getName() + ", getSexo()=" + getSexo() + ", getDataNascimento()="
-				+ getDataNascimento() + ", vip=" + vip + "]";
+				+ sdf.format(getDataNascimento()) + ", vip=" + vip + "]";
 	}
 }
