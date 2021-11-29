@@ -2,7 +2,7 @@ package entities;
 
 import entities.enums.TipoProdutos;
 
-public abstract class Produto implements Iproduto {
+public abstract class Produto implements Iproduto{
 	
 	private String nome;
 	private Integer quant;
@@ -41,6 +41,7 @@ public abstract class Produto implements Iproduto {
 		this.tipo = tipo;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Produto [nome=" + nome + ", quant=" + quant + ", tipo=" + tipo + "]";
