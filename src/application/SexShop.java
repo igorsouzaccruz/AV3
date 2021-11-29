@@ -90,6 +90,9 @@ public class SexShop {
 		}
 		System.out.println(total);
 		
+		//Pedido pedido (cliente,produtos,taxa)
+		
+		
 		}catch (ParseException e) {
 			System.out.println("Você digitou a data no formato errado! " + e);
 		}catch (InputMismatchException e) {
