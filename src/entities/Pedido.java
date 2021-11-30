@@ -3,6 +3,7 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import services.Pagamento;
 import services.Taxa;
 
 public class Pedido {
@@ -11,12 +12,14 @@ public class Pedido {
 	private List<Produto> produtos = new ArrayList<>();
 	
 	private Taxa taxa;
+	private Pagamento pagamento;
 	
-	public Pedido(Cliente cliente, List<Produto> produtos, Taxa taxa) {
+	public Pedido(Cliente cliente, List<Produto> produtos, Taxa taxa, Pagamento pagamento) {
 		super();
 		this.cliente = cliente;
 		this.produtos = produtos;
 		this.taxa = taxa;
+		this.pagamento = pagamento;
 	}
 
 	public Cliente getCliente() {
@@ -43,10 +46,19 @@ public class Pedido {
 		this.taxa = taxa;
 	}
 
-	private double processamentoPedido() {
+	public Pagamento getPagamento() {
+		return pagamento;
+	}
+
+	public void setPagamento(Pagamento pagamento) {
+		this.pagamento = pagamento;
+	}
+
+	public double processamentoPedido() {
 		double total = 0.0;
 		for(Produto pro:produtos) {
-			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco())); 
+			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco()));
+			System.out.println(total);
 			}
 		return total;
 	}

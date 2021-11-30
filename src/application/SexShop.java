@@ -13,10 +13,13 @@ import entities.Acessorios;
 import entities.Cliente;
 import entities.Gel;
 import entities.Oleo;
+import entities.Pedido;
 import entities.Produto;
 import entities.Vibradores;
 import entities.enums.TipoLubrificantes;
 import entities.enums.TipoProdutos;
+import services.Credito;
+import services.taxaPadrao;
 
 public class SexShop {
 
@@ -36,10 +39,8 @@ public class SexShop {
 		String sexo = sc.nextLine();
 		System.out.print("dataNascimento? (dd/MM/yyyy): ");
 		Date dataNascimento = sdf.parse(sc.next());
-		System.out.println("Deseja ser um Cliente VIP? (true/false): ");
-		boolean vip = sc.nextBoolean();
 		
-		Cliente cliente = new Cliente(name, sexo, dataNascimento, vip);
+		Cliente cliente = new Cliente(name, sexo, dataNascimento);
 		System.out.println(cliente);
 		System.out.println();
 		
@@ -82,17 +83,11 @@ public class SexShop {
 		System.out.println("Deseja mais um produto? (y/n)");
 		ch = sc.next().toLowerCase().charAt(0);
 		}while(ch == 'y');
-		double total = 0.0;
-		for(Produto pro:produtos) {
-			System.out.println(pro);
-			System.out.println("R$ " + pro.pegarPreco());
-			total = total + pro.pegarPreco();
-		}
-		System.out.println(total);
 		
-		//Pedido pedido (cliente,produtos,taxa)
-		
-		
+		Pedido pedido = new Pedido(cliente,produtos,new taxaPadrao(), new Credito());
+	
+		System.out.println("R$ " + pedido.processamentoPedido());
+				
 		}catch (ParseException e) {
 			System.out.println("Você digitou a data no formato errado! " + e);
 		}catch (InputMismatchException e) {
