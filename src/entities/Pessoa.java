@@ -6,12 +6,12 @@ public abstract class Pessoa {
 	
 	private String name;
 	private String sexo;
-	private Date dataNascimento;
+	private String dataNascimento;
 	
 	public Pessoa() {
 	}
 
-	public Pessoa(String name, String sexo, Date dataNascimento) {
+	public Pessoa(String name, String sexo, String dataNascimento) {
 		super();
 		this.name = name;
 		this.sexo = sexo;
@@ -34,11 +34,11 @@ public abstract class Pessoa {
 		this.sexo = sexo;
 	}
 
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

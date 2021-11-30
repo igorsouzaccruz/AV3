@@ -57,8 +57,7 @@ public class Pedido {
 	public double processamentoPedido() {
 		double total = 0.0;
 		for(Produto pro:produtos) {
-			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco()));
-			System.out.println(total);
+			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco()) + pagamento.impostoPagamento(total));
 			}
 		return total;
 	}

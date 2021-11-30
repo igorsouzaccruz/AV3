@@ -29,7 +29,6 @@ public class SexShop {
 		Scanner sc = new Scanner(System.in);
 		List<Produto> produtos= new ArrayList<>();
 				
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 		try {
 		System.out.println("Cadastrar Cliente: ");
@@ -38,7 +37,7 @@ public class SexShop {
 		System.out.print("Sexo (masculino/feminino): ");
 		String sexo = sc.nextLine();
 		System.out.print("dataNascimento? (dd/MM/yyyy): ");
-		Date dataNascimento = sdf.parse(sc.next());
+		String dataNascimento = sc.nextLine();
 		
 		Cliente cliente = new Cliente(name, sexo, dataNascimento);
 		System.out.println(cliente);
@@ -88,10 +87,10 @@ public class SexShop {
 	
 		System.out.println("R$ " + pedido.processamentoPedido());
 				
-		}catch (ParseException e) {
-			System.out.println("Você digitou a data no formato errado! " + e);
 		}catch (InputMismatchException e) {
 			System.out.println("Você digitou um valor diferente do esperado! ");
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		sc.close();
 		}
