@@ -7,4 +7,5 @@ public class taxaPadrao implements Taxa {
 		return valorBasico * 0.2;
 	}
 
+
 }

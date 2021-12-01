@@ -21,8 +21,8 @@ public class Acessorios extends Produto {
 
 	@Override
 	public String toString() {
-		return "Acessorios [getNome()=" + getNome() + ", getQuant()=" + getQuant() + ", getTipo()=" + getTipo()
-				+ ", material=" + material + "]";
+		return "Acessorios:  Nome = " + getNome() + ", Quantidade = " + getQuant() + ", Tipo = " + getTipo()
+				+ ", Material = " + material +", Valor: R$" + pegarPreco() + "\n";
 	}
 
 	@Override

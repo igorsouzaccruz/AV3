@@ -43,12 +43,12 @@ public class SexShop {
 		char ch = 'y';
 		do {
 		sc.nextLine();
-		System.out.println("Qual nome do produto");
+		System.out.println("Qual nome do produto?");
 		String produto = sc.nextLine();		
-		System.out.println("Quantas unidades?");
-		int unid = sc.nextInt();
 		System.out.println("Qual tipo do produto?(ACESSORIOS/VIBRADORES/LUBRIFICANTES)");
 		TipoProdutos tipoProduto = TipoProdutos.valueOf(sc.next().toUpperCase()); 
+		System.out.println("Quantas unidades?");
+		int unid = sc.nextInt();
 		
 		if(tipoProduto == TipoProdutos.valueOf("ACESSORIOS")) {	
 			System.out.println("Qual o material?");
@@ -82,7 +82,7 @@ public class SexShop {
 		
 		Pedido pedido = new Pedido(cliente,produtos,new taxaPadrao(), new Credito());
 	
-		System.out.println("R$ " + pedido.processamentoPedido());
+		System.out.println(pedido);
 				
 		}catch (InputMismatchException e) {
 			System.out.println("Você digitou um valor diferente do esperado! ");

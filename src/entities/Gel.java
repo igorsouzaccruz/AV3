@@ -23,8 +23,8 @@ public class Gel extends Lubrificantes{
 
 	@Override
 	public String toString() {
-		return "Oleo [getTipoLub()=" + getTipoLub() + ", getVolume()=" + getVolume() + ", getNome()=" + getNome()
-				+ ", getQuant()=" + getQuant() + ", getTipo()=" + getTipo() + ", comestivel=" + comestivel + "]";
+		return "Gel:  Tipo de Lubrificante = " + getTipoLub() + ", Volume = " + getVolume()+ " ml" + ", Nome = " + getNome()
+				+ ", Quantidade = " + getQuant() + ", Tipo = " + getTipo() + ", Comestivel = " + comestivel + ", Valor: R$" + pegarPreco() +"\n";
 	}
 
 	@Override

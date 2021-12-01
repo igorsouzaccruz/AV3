@@ -47,6 +47,6 @@ public abstract class Produto implements Iproduto{
 	
 	@Override
 	public String toString() {
-		return "Produto [nome=" + nome + ", quant=" + quant + ", tipo=" + tipo + "]";
+		return "Produto: Nome = " + nome + ", Quantidade = " + quant + ", Tipo = " + tipo;
 	}
 }

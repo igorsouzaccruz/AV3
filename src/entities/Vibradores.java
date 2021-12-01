@@ -21,8 +21,8 @@ public class Vibradores extends Produto {
 
 	@Override
 	public String toString() {
-		return "Vibradores [getNome()=" + getNome() + ", getQuant()=" + getQuant() + ", getTipo()=" + getTipo()
-				+ ", tamanho=" + tamanho + "]";
+		return "Vibradores:  Nome = " + getNome() + ", Quantidade = " + getQuant() + ", Tipo = " + getTipo()
+				+ ", Tamanho = " + tamanho + ", Valor: R$" + pegarPreco() +"\n";
 	}
 
 	@Override

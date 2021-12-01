@@ -10,9 +10,6 @@ import java.util.GregorianCalendar;
 import exception.idadeException;
 
 public class Cliente extends Pessoa{
-	
-	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
 	public Cliente(String name, String sexo, String dataNascimento) throws Exception {
 		super(name, sexo, dataNascimento);
 		if(checarIdade(dataNascimento, "dd/MM/yyyy") < 18) 
@@ -44,10 +41,15 @@ public class Cliente extends Pessoa{
 		return age;
 		}
 	
-
+	public void agradecerCadastro() {
+		System.out.println("Valeu parça");
+	}
+	public void agradecerCadastro(String name) {
+		System.out.println("Valeu parça" + name);
+	}
+	
 	@Override
 	public String toString() {
-		return "Cliente [getName()=" + getName() + ", getSexo()=" + getSexo() + ", getDataNascimento()="
-				+ getDataNascimento() + "]";
+		return "\nCliente: Name = " + getName() + ", Sexo = " + getSexo() + ", Data Nascimento = " + getDataNascimento();
 	}
 }

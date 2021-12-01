@@ -22,6 +22,10 @@ public class Pedido {
 		this.pagamento = pagamento;
 	}
 
+	public Pedido() {
+		super();
+	}
+
 	public Cliente getCliente() {
 		return cliente;
 	}
@@ -65,6 +69,16 @@ public class Pedido {
 		total = pagamento.impostoPagamento(total);
 		return total;
 	}
+	
+
+	@Override
+	public String toString() {
+		return "Pedido:\nCliente = " + cliente.getName() 
+		+ ";\n" +	produtos
+		+ "\n" + 
+		"\nValorTotal: R$" + String.format("%.2f", processamentoPedido()) ;
+	}
+	
 	
 	
 	

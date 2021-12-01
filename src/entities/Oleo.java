@@ -15,8 +15,8 @@ public class Oleo extends Lubrificantes{
 
 	@Override
 	public String toString() {
-		return "Oleo [getTipoLub()=" + getTipoLub() + ", getVolume()=" + getVolume() + ", getNome()=" + getNome()
-				+ ", getQuant()=" + getQuant() + ", getTipo()=" + getTipo() + ", cheiro=" + cheiro + "]";
+		return "Oleo: Tipo de Lubrificante = " + getTipoLub() + ", Volume = " + getVolume()+ " ml" + ", Nome: " + getNome()
+				+ ", Quantidade = " + getQuant() + ", Tipo = " + getTipo() + ", Cheiro = " + cheiro + ", Valor: R$" + pegarPreco() + "\n";
 	}
 
 	@Override
