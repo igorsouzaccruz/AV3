@@ -54,11 +54,15 @@ public class Pedido {
 		this.pagamento = pagamento;
 	}
 
-	public double processamentoPedido() {
+	public double processamentoPedido() throws NullPointerException {
 		double total = 0.0;
+		
 		for(Produto pro:produtos) {
-			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco()) + pagamento.impostoPagamento(total));
-			}
+			total = total + (pro.pegarPreco() + taxa.aplicaTaxa(pro.pegarPreco()) );
+			if(produtos == null) 
+			throw new NullPointerException("Produto não cadastrado!");
+		}
+		total = pagamento.impostoPagamento(total);
 		return total;
 	}
 	

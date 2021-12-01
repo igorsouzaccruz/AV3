@@ -1,6 +1,7 @@
-package entities;
+	package entities;
 
 import entities.enums.TipoProdutos;
+import exception.produtosException;
 
 public abstract class Produto implements Iproduto{
 	
@@ -11,7 +12,9 @@ public abstract class Produto implements Iproduto{
 	public Produto() {
 	}
 
-	public Produto(String nome, Integer quant, TipoProdutos tipo) {
+	public Produto(String nome, Integer quant, TipoProdutos tipo) throws produtosException {
+		if(quant <= 0) 
+			throw new produtosException("Erro: Quantidade mínima de produtos não atingida!!!");
 		this.nome = nome;
 		this.quant = quant;
 		this.tipo = tipo;
