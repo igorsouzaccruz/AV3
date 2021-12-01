@@ -20,6 +20,8 @@ import services.taxaPadrao;
 
 public class SexShop {
 
+	//Prova AV3 disciplina de POO equipe Igor Souza Cruz e Luíza Araújo Martins:
+	
 	public static void main(String[] args) {
 
 		Locale.setDefault(Locale.US);
