@@ -7,13 +7,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import exception.idadeException;
+import exception.IdadeException;
 
 public class Cliente extends Pessoa{
 	public Cliente(String name, String sexo, String dataNascimento) throws Exception {
 		super(name, sexo, dataNascimento);
 		if(checarIdade(dataNascimento, "dd/MM/yyyy") < 18) 
-			throw new idadeException("Erro: Cliente cadastratado é menor de idade!!!");
+			throw new IdadeException("Erro: Cliente cadastratado é menor de idade!!!");
 	}
 
 	public int checarIdade(String dataNasc, String pattern) throws Exception {

@@ -1,6 +1,6 @@
 package services;
 
-public class taxaBlackFriday implements Taxa {
+public class TaxaBlackFriday implements Taxa {
 
 	@Override
 	public double aplicaTaxa(double valorBasico) throws ArithmeticException {

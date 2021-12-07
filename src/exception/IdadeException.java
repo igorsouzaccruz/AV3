@@ -1,9 +1,9 @@
 package exception;
 
-public class idadeException extends RuntimeException{
+public class IdadeException extends RuntimeException{
 	private static final long serialVersionUID = 1L;
 	
-	public idadeException(String msg) {
+	public IdadeException(String msg) {
 		super(msg);
 	}
 

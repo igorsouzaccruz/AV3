@@ -26,8 +26,7 @@ public class SexShop {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		List<Produto> produtos= new ArrayList<>();
-				
+		List<Produto> produtos= new ArrayList<>();		
 		
 		try {
 		System.out.println("Cadastrar Cliente: ");
